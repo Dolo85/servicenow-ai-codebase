@@ -1,0 +1,58 @@
+name: Sync ServiceNow Repo to AI Codebase
+
+on:
+  push:
+    branches:
+      - sn_instances/dev316185
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout CHILD repo (source)
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2️⃣ Checkout AI repo (destination)
+      - name: Checkout AI repo
+        uses: actions/checkout@v4
+        with:
+          repository: Dolo85/servicenow-ai-codebase
+          path: ai-repo
+          token: ${{ secrets.AI_REPO_TOKEN }}
+
+      # 3️⃣ Install dependencies (AI repo owns tooling)
+      - name: Install AI repo dependencies
+        working-directory: ai-repo
+        run: npm install
+
+      # 5️⃣ Normalize Script Includes
+        # - name: Normalize Script Includes
+     #   run: |
+       #   node ai-repo/scripts/normalize-script-includes.js \
+          #  $GITHUB_WORKSPACE \
+           # ai-repo/apps/x_company_dev316185
+      - name: Copy raw source into AI repo (debug)
+        run: |
+          mkdir -p ai-repo/raw/sn_instances_dev316185
+          rsync -av \
+            --exclude='ai-repo' \
+            --exclude='.git' \
+            ./ ai-repo/raw/sn_instances_dev316185/
+
+      # 5️⃣ Commit & push to AI repo
+      - name: Commit and push to AI repo
+        working-directory: ai-repo
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add .
+          git commit -m "Sync from sn_instances/dev316185" || echo "No changes to commit"
+          git push
