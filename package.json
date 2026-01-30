@@ -1,0 +1,28 @@
+{
+  "name": "servicenow-ai-codebase",
+  "version": "1.0.0",
+  "description": "Read-only aggregated ServiceNow codebase for AI analysis",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dolo85/servicenow-ai-codebase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dolo85/servicenow-ai-codebase/issues"
+  },
+  "homepage": "https://github.com/Dolo85/servicenow-ai-codebase#readme",
+  "dependencies": {
+    "fast-xml-parser": "^5.3.3",
+    "xml2js": "^0.6.2"
+  }
+}
