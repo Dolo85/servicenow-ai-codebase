@@ -11,7 +11,7 @@
         <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[var testScript = Class.create();
 testScript.prototype = {
-    initialize: function() {
+    initialize: function(secondCommit) {
     },
 
     type: 'testScript'
@@ -20,14 +20,14 @@ testScript.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-01-31 03:25:30</sys_created_on>
         <sys_id>d96d0fc183b2721060855c50ceaad368</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>testScript</sys_name>
         <sys_package display_value="RC App 2" source="0f214381833e321060855c50ceaad30c">0f214381833e321060855c50ceaad30c</sys_package>
         <sys_policy/>
         <sys_scope display_value="RC App 2">0f214381833e321060855c50ceaad30c</sys_scope>
         <sys_update_name>sys_script_include_d96d0fc183b2721060855c50ceaad368</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-31 03:25:30</sys_updated_on>
+        <sys_updated_on>2026-01-31 03:27:39</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>d96d0fc183b2721060855c50ceaad368</id>
