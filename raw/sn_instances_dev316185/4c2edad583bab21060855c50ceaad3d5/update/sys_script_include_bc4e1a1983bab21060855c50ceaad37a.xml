@@ -11,7 +11,7 @@
         <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[var testScript3 = Class.create();
 testScript3.prototype = {
-    initialize: function(test5) {
+    initialize: function(test6) {
     },
 
     type: 'testScript3'
@@ -20,14 +20,14 @@ testScript3.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-01-31 18:38:10</sys_created_on>
         <sys_id>bc4e1a1983bab21060855c50ceaad37a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>testScript3</sys_name>
         <sys_package display_value="RC App 3" source="4c2edad583bab21060855c50ceaad3d5">4c2edad583bab21060855c50ceaad3d5</sys_package>
         <sys_policy/>
         <sys_scope display_value="RC App 3">4c2edad583bab21060855c50ceaad3d5</sys_scope>
         <sys_update_name>sys_script_include_bc4e1a1983bab21060855c50ceaad37a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-31 19:05:59</sys_updated_on>
+        <sys_updated_on>2026-02-01 13:50:43</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>bc4e1a1983bab21060855c50ceaad37a</id>
